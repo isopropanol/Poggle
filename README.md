@@ -17,7 +17,7 @@ This is a fork of [Angular Seed](https://github.com/angular/angular-seed) but wi
 
 ## Installation
 
-    git clone git@github.com:tnajdek/angular-requirejs-seed.git
+    git clone https://github.com/isopropanol/Poggle.git
     cd angular-requirejs-seed
     npm install
 
