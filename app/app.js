@@ -5,8 +5,6 @@ define([
 	'common',
 	"_",
 	'angularRoute',
-	'view1/view1',
-	'view2/view2',
 	'home/home',
 
 	'models/game',
@@ -21,8 +19,6 @@ define([
 	// Declare app level module which depends on views, and components
 	return angular.module('myApp', [
 		'ngRoute',
-		'myApp.view1',
-		'myApp.view2',
 		'myApp.home',
 
 		// models
