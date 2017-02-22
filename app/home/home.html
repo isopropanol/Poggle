@@ -1,0 +1,54 @@
+<div class="container">
+
+  <div class="header">
+
+  </div>
+
+  <div class="score-box">
+    <h2>Word</h2>
+    <h2 class="scores">Score</h2>
+    <div class="word-list">
+      <li ng-repeat="word in game.words">
+        <span ng-repeat="die in word">{{die.letter}}</span>
+      </li>
+    </div>
+
+    <div class="scores">
+
+    </div>
+  </div>
+
+  <div>
+
+    <div class="game-area blue-area">
+      <div class="">
+        <div class="row" ng-repeat="row in game.state">
+          <div class="tile"
+            ng-repeat="die in row"
+            ng-click="toggleDie(die)"
+            ng-class="{'tile-selected' : die.active}">
+              <div ng-bind="die.letter"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=""> </div>
+
+
+    <div class="game-area">
+      <div class="current-header">
+        Current Word
+      </div>
+
+      <div class="current-word">
+        <span ng-repeat="die in game.currentWord">{{die.letter}}</span>
+        &nbsp;
+      </div>
+
+      <div class="button">
+        <div>Submit Word</div>
+      </div>
+    </div>
+  </div>
+</div>
