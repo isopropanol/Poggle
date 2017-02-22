@@ -1,20 +1,22 @@
 <div class="container">
 
   <div class="header">
-
+    <img src="assets/Poggle-logo.png">
   </div>
 
   <div class="score-box">
-    <h2>Word</h2>
+    <h2 class="words">Word</h2>
     <h2 class="scores">Score</h2>
     <div class="word-list">
-      <li ng-repeat="word in game.words">
-        <span ng-repeat="die in word">{{die.letter}}</span>
-      </li>
+      <div class="item" ng-repeat="word in game.words">
+        <div class="words">{{word.string}}</div>
+        <div class="scores">{{word.score}}</div>
+      </div>
     </div>
 
-    <div class="scores">
-
+    <div class="total-score">
+      <h2>total score</h2>
+      <span>{{totalScore()}}</span>
     </div>
   </div>
 
@@ -46,7 +48,7 @@
         &nbsp;
       </div>
 
-      <div class="button">
+      <div class="button" ng-click="addWord()">
         <div>Submit Word</div>
       </div>
     </div>

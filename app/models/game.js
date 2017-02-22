@@ -50,6 +50,17 @@ define([
 
         }
 
+        Game.prototype.hasWord = function () {
+          var currentWordString = _.map(this.currentWord, function (die) {
+            return  die.letter;
+          }).join("");
+          
+          var output =  !_.some(this.words, function (word) {
+            return word.string === currentWordString;
+          });
+          return output;
+        }
+
         return Game;
     });
 });

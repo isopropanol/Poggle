@@ -94,7 +94,7 @@
   text-align: right;
 }
 
-.score-box li {
+.score-box .item {
   padding-top: 15px;
 }
 

@@ -20,5 +20,13 @@ define([
 		$scope.toggleDie = function (die) {
 			GameService.toggleDie(die);
 		}
+
+		$scope.addWord = function () {
+			GameService.addWord();
+		}
+
+		$scope.totalScore = function () {
+			return GameService.score();
+		}
 	}]);
 });

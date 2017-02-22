@@ -1,9 +1,10 @@
 define([
     'angular',
-    'models/game'
+    'models/game',
+    'models/word'
 ], function (angular) {
     "use strict";
-    angular.module('myApp.services.game',[]).service('GameService', function (Game) {
+    angular.module('myApp.services.game',[]).service('GameService', function (Game, Word) {
         var game = new Game();
         var gameService = {
           game:game,
@@ -15,6 +16,22 @@ define([
               return true;
             }
             return false;
+          },
+          addWord : function(){
+            if(game.currentWord.length > 0 && game.hasWord()){
+              game.words.push(new Word(game.currentWord))
+              _.each(game.currentWord, function (die) {
+                die.active = false;
+              })
+              game.currentWord = [];
+            }
+          },
+          score : function () {
+            var totalScore = 0;
+            _.each(game.words, function(word){
+              totalScore += word.score;
+            });
+            return totalScore
           }
         };
 

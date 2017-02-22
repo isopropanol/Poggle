@@ -11,6 +11,7 @@ define([
 
 	'models/game',
 	'models/die',
+	'models/word',
 
 	//services
 	'services/game'
@@ -27,6 +28,7 @@ define([
 		// models
 		'myApp.models.game',
 		'myApp.models.die',
+		'myApp.models.word',
 
 		//services
 		'myApp.services.game'
